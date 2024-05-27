@@ -129,7 +129,7 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
-  plugins: ['docugraph'],
+  plugins: ['docusaurus-graph'],
 };
 
 export default config;
