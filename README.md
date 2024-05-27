@@ -1,11 +1,11 @@
-# docugraph
+# docusaurus-graph
 
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
     <img src="assets/Graphview.png" alt="screenshot" width="700">
 
-  <h3 align="center">docugraph</h3>
+  <h3 align="center">docusaurus-graph</h3>
 
   <p align="center">
     Graphview docusaurus
@@ -63,13 +63,13 @@ To install the plugin, you need to have Docusaurus set up. Follow these steps to
 1. Install the plugin via npm or yarn:
 
 ```sh
-npm install docugraph
+npm install docusaurus-graph
 ```
 
 or
 
 ```sh
-yarn add docugraph
+yarn add docusaurus-graph
 ```
 
 2. Add the plugin to your Docusaurus site configuration (**docusaurus.config.js**):
@@ -79,7 +79,7 @@ module.exports = {
   // Other Docusaurus configurations...
   plugins: [
     [
-      'docugraph',
+      'docusaurus-graph',
       {
         path: 'docs', // Specify the folder of your documentation
       },
@@ -121,7 +121,7 @@ module.exports = {
   // Other Docusaurus configurations...
   plugins: [
     [
-      'docugraph',
+      'docusaurus-graph',
       {
         path: 'docs', // Specify the folder of your documentation
       },
@@ -254,7 +254,7 @@ The Docusaurus GraphView Plugin works by parsing your Docusaurus documentation f
 - **Graph Visualization**: The constructed graph is then rendered using a graph visualization library (such as note-graph (D3.js)), applying the configured layout and styles.
 - **Interactive Elements**: The generated graph is interactive, allowing users to zoom in/out and drag nodes for better viewing.
 
-> After the Docusaurus build process completes, the Docusaurus GraphView Plugin generates a data file containing the parsed documentation structure. This file, typically named `docugraph.json`, includes all the necessary information to construct the graph view, such as nodes (documents) and edges (links between documents). The file is created in the `build` directory of your Docusaurus project.
+> After the Docusaurus build process completes, the Docusaurus GraphView Plugin generates a data file containing the parsed documentation structure. This file, typically named `docusaurus-graph.json`, includes all the necessary information to construct the graph view, such as nodes (documents) and edges (links between documents). The file is created in the `build` directory of your Docusaurus project.
 
 ## Development
 
@@ -263,13 +263,13 @@ If you want to contribute to the plugin or modify it for your own use, follow th
 1. Clone the repository
 
 ```sh
-git clone https://github.com/Arsero/docugraph.git
+git clone https://github.com/Arsero/docusaurus-graph.git
 ```
 
 2. Navigate to the project directory:
 
 ```sh
-cd docugraph
+cd docusaurus-graph
 ```
 
 3. Install the dependencies:
@@ -281,7 +281,7 @@ yarn install
 4. Make your changes and test them locally. To test them go to the `demo` folder.
 
 ```sh
-cd .\src\demo
+cd demo
 yarn install
 yarn start
 ```

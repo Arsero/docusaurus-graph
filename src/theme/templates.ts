@@ -91,7 +91,7 @@ const templates = {
     let graphViewGlobal = null;
     async function initGraphView() {
       const notes = await (
-        await fetch('/docugraph.json')
+        await fetch('/docusaurus-graph.json')
       ).json();
 
       const graphModel = new NOTE_GRAPH.NoteGraphModel(notes);
