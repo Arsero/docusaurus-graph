@@ -1,6 +1,6 @@
 {
   "name": "docusaurus-graph",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "main": "src/index.ts",
   "repository": "https://github.com/Arsero/docusaurus-graph.git",
   "author": "Arsero <54241944+Arsero@users.noreply.github.com>",
