@@ -1,6 +1,6 @@
 ---
 sidebar_position: 3
-categories: intro
+sources: intro
 ---
 
 # Create a Blog Post

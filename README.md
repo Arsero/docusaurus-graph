@@ -77,29 +77,8 @@ yarn add docusaurus-graph
 ```js
 module.exports = {
   // Other Docusaurus configurations...
-  plugins: [
-    [
-      'docusaurus-graph',
-      {
-        path: 'docs', // Specify the folder of your documentation
-      },
-    ],
-  ],
+  plugins: ['docusaurus-graph'],
 };
-```
-
-> The default path is `docs`.
-
-3. Build the project to create the data file.
-
-```sh
-npm run build
-```
-
-or
-
-```sh
-yarn build
 ```
 
 ## Usage
@@ -123,30 +102,34 @@ module.exports = {
     [
       'docusaurus-graph',
       {
-        path: 'docs', // Specify the folder of your documentation
+         docsDir: "docs",
+         buildDir: "build",
+         sourcesTag: "sources",
+         referencesTag: "references",
       },
     ],
   ],
 };
 ```
 
-- `path`: (default: `docs`) The folder containing your documentation files.
+- `docsDir [default: docs]`: Specifies the path of the folder containing your documentation files.
+- `buildDir [default: build]`: Specifies the path of the output build folder.
+- `sourcesTag [default: sources]`: Specifies the sources tag name for .md files.
+- `referencesTag [default: references]`: Specifies the references tag name for .md files.
 
 ### Markdown files
 
 To create link between files, there are 2 tags :
 
-#### Categories
+#### Sources
 
-Set the categories tag to a markdown file or a name (a file that doesn't exist). Example:
-
-To a markdown file (intro.md):
+Set the categories tag to a markdown file or a name. Example:
 
 ```md
 ## [comment]: <> (congratulations.md)
 
 sidebar_position: 6
-categories: intro
+sources: tutorial-basics
 
 ---
 
@@ -157,24 +140,7 @@ You have just learned the **basics of Docusaurus** and made some changes to the 
 Docusaurus has **much more to offer**!
 ```
 
-To a name:
-
-```md
-## [comment]: <> (congratulations.md)
-
-sidebar_position: 6
-categories: tutorial-basics
-
----
-
-# Congratulations!
-
-You have just learned the **basics of Docusaurus** and made some changes to the **initial template**.
-
-Docusaurus has **much more to offer**!
-```
-
-Result :
+**Result :**
 
 <p align="center">
     <img src="assets/CongratulationCategories.png" alt="graphview">
@@ -186,7 +152,7 @@ Result :
 ## [comment]: <> (congratulations.md)
 
 sidebar_position: 6
-categories:
+sources:
 
 - intro
 - tutorial-basics
@@ -196,33 +162,7 @@ categories:
 
 #### References
 
-Set the references tag to a markdown file or a name (a file that doesn't exist). Example:
-
-To a markdown file (intro.md):
-
-```md
-## [comment]: <> (congratulations.md)
-
-sidebar_position: 6
-references: intro
-
----
-
-#### Differences
-
-What's the difference between categories and references ?
-
-See the categories like a parent or a chapter. Example : Car -> Engine.
-The references is more like a child. Example : Wheel -> Car.
-
-# Congratulations!
-
-You have just learned the **basics of Docusaurus** and made some changes to the **initial template**.
-
-Docusaurus has **much more to offer**!
-```
-
-To a name:
+Set the references tag to a markdown file or a name. Example:
 
 ```md
 ## [comment]: <> (congratulations.md)
@@ -239,7 +179,7 @@ You have just learned the **basics of Docusaurus** and made some changes to the 
 Docusaurus has **much more to offer**!
 ```
 
-Result :
+**Result :**
 
 <p align="center">
     <img src="assets/CongratulationReferences.png" alt="graphview">
@@ -247,14 +187,14 @@ Result :
 
 ## How it works
 
-The Docusaurus GraphView Plugin works by parsing your Docusaurus documentation files located in the specified `path` and creating a visual graph representation based on the relationships between them. Here’s a high-level overview of the process:
+The Docusaurus GraphView Plugin works by parsing your Docusaurus documentation files located in the specified `docsDir` and creating a visual graph representation based on the relationships between them. Here’s a high-level overview of the process:
 
 - **File Parsing**: The plugin scans the documentation files in your specified folder (path) to identify references between documents.
 - **Graph Construction**: Using the parsed data, the plugin constructs a graph data structure where nodes represent documents and edges represent references between them.
 - **Graph Visualization**: The constructed graph is then rendered using a graph visualization library (such as note-graph (D3.js)), applying the configured layout and styles.
 - **Interactive Elements**: The generated graph is interactive, allowing users to zoom in/out and drag nodes for better viewing.
 
-> After the Docusaurus build process completes, the Docusaurus GraphView Plugin generates a data file containing the parsed documentation structure. This file, typically named `docusaurus-graph.json`, includes all the necessary information to construct the graph view, such as nodes (documents) and edges (links between documents). The file is created in the `build` directory of your Docusaurus project.
+> After the Docusaurus build process completes, the Docusaurus GraphView Plugin generates a data file containing the parsed documentation structure. This file, typically named `docusaurus-graph.json`, includes all the necessary information to construct the graph view, such as nodes (documents) and edges (links between documents).
 
 ## Development
 

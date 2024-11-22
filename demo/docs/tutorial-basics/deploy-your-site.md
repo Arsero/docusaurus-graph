@@ -1,6 +1,6 @@
 ---
 sidebar_position: 5
-categories: tutorial-basics
+sources: tutorial-basics
 references: tutorial-extras
 ---
 

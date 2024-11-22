@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-categories: tutorial-extras
+sources: tutorial-extras
 ---
 
 # Manage Docs Versions
@@ -35,7 +35,7 @@ export default {
       items: [
         // highlight-start
         {
-          type: 'docsVersionDropdown',
+          type: "docsVersionDropdown",
         },
         // highlight-end
       ],

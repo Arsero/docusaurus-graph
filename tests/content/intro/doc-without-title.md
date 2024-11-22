@@ -1,10 +1,7 @@
 ---
 sidebar_position: 5
-sources: docs
 references: intro
 ---
-
-# Deploy your site
 
 Docusaurus is a **static-site-generator** (also called **[Jamstack](https://jamstack.org/)**).
 

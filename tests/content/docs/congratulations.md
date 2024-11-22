@@ -1,6 +1,6 @@
 ---
 sidebar_position: 6
-categories: docs
+sources: docs
 ---
 
 # Congratulations!

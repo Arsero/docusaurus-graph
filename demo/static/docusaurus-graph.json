@@ -1,12 +1,12 @@
 [
   {
-    "id": "Tutorial Intro",
+    "id": "intro",
     "title": "Tutorial Intro",
     "linkTo": [],
     "referencedBy": []
   },
   {
-    "id": "Congratulations!",
+    "id": "congratulations",
     "title": "Congratulations!",
     "linkTo": [
       "tutorial-basics"
@@ -19,38 +19,48 @@
     "id": "tutorial-basics",
     "title": "tutorial-basics",
     "linkTo": [
-      "Create a Blog Post",
-      "Create a Document",
-      "Create a Page",
-      "Deploy your site"
+      "create-a-blog-post",
+      "create-a-document",
+      "create-a-page",
+      "deploy-your-site"
     ],
     "referencedBy": [
-      "Congratulations!",
-      "Translate your site"
+      "congratulations",
+      "translate-your-site"
     ]
   },
   {
     "id": "tutorial-extras",
     "title": "tutorial-extras",
     "linkTo": [
-      "Congratulations!",
-      "Manage Docs Versions",
-      "Translate your site"
+      "congratulations",
+      "manage-docs-versions",
+      "translate-your-site"
     ],
     "referencedBy": [
-      "Deploy your site"
+      "deploy-your-site"
     ]
   },
   {
-    "id": "Create a Blog Post",
+    "id": "create-a-blog-post",
     "title": "Create a Blog Post",
-    "linkTo": [],
+    "linkTo": [
+      "create-a-page"
+    ],
     "referencedBy": [
       "tutorial-basics"
     ]
   },
   {
-    "id": "Create a Document",
+    "id": "create-a-page",
+    "title": "create-a-page",
+    "linkTo": [],
+    "referencedBy": [
+      "create-a-blog-post"
+    ]
+  },
+  {
+    "id": "create-a-document",
     "title": "Create a Document",
     "linkTo": [],
     "referencedBy": [
@@ -58,15 +68,7 @@
     ]
   },
   {
-    "id": "Create a Page",
-    "title": "Create a Page",
-    "linkTo": [],
-    "referencedBy": [
-      "tutorial-basics"
-    ]
-  },
-  {
-    "id": "Deploy your site",
+    "id": "deploy-your-site",
     "title": "Deploy your site",
     "linkTo": [
       "tutorial-extras"
@@ -76,13 +78,13 @@
     ]
   },
   {
-    "id": "Markdown Features",
+    "id": "markdown-features",
     "title": "Markdown Features",
     "linkTo": [],
     "referencedBy": []
   },
   {
-    "id": "Manage Docs Versions",
+    "id": "manage-docs-versions",
     "title": "Manage Docs Versions",
     "linkTo": [],
     "referencedBy": [
@@ -90,7 +92,7 @@
     ]
   },
   {
-    "id": "Translate your site",
+    "id": "translate-your-site",
     "title": "Translate your site",
     "linkTo": [
       "tutorial-basics"

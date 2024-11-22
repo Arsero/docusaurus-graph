@@ -1,6 +1,7 @@
 ---
 sidebar_position: 3
-categories: tutorial-basics
+sources: tutorial-basics
+references: create-a-page
 ---
 
 # Create a Blog Post
